@@ -5,9 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monaco:pixelsize=15:antialias=true:autohint=true";
-static char *font2[] = { "Noto Sans Mono CJK JP:pixelsize=12:antialias=true:autohint=true" };
-static char *font3[] = { "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true" };
+static char *font = "mono:pixelsize=15:antialias=true:autohint=true";
+static char *font2[] = { "monaco:pixelsize=15:antialias=true:autohint=true" };
+static char *font3[] = { "Noto Sans Mono CJK JP:pixelsize=15:antialias=true:autohint=true" };
+static char *font4[] = { "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
