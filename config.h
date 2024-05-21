@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=15:antialias=true:autohint=true";
-static char *font2[] = { "Noto Sans Mono CJK JP:pixelsize=15:antialias=true:autohint=true" };
-static char *font3[] = { "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true" };
+static char *font = "mono:pixelsize=17:antialias=true:autohint=true";
+static char *font2[] = { "Noto Sans Mono CJK JP:pixelsize=17:antialias=true:autohint=true" };
+static char *font3[] = { "NotoColorEmoji:pixelsize=13:antialias=true:autohint=true" };
 static int borderpx = 2;
 /*
  * What program is execed by st depends of these precedence rules:
@@ -86,6 +86,7 @@ const int boxdraw_braille = 0;
  */
 static int bellvolume = 0;
 
+
 /* default TERM value */
 char *termname = "st-256color";
 
@@ -107,34 +108,35 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.85;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#000000", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#990000",
-	"#00a600",
-	"#999900",
-	"#2009db",
-	"#b200b2",
-	"#00a6b2",
-	"#bfbfbf",
-	"#666666",
-	"#e50000",
-	"#00d900",
-	"#e5e500",
-	"#0000ff",
-	"#e500e5",
-	"#00e5e5",
-	"#e5e5e5",
+	/* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#222222",
+	"#F01818",
+	"#24D830",
+	"#F0D824",
+	"#7890F0",
+	"#F078D8",
+	"#54E4E4",
+	"#A5A5A5",
+	"#888888",
+	"#EF8383",
+	"#7ED684",
+	"#EFE28B",
+	"#B3BFEF",
+	"#EFB3E3",
+	"#9CE2E2",
+	"#FFFFFF",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#fffcf0", /* 256 -> cursor */
-	"#100f0f", /* 257 -> rev cursor*/
+	"#a5a5a5", /* 256 -> cursor */
+	"#888888", /* 257 -> rev cursor*/
 	"#000000", /* 258 -> bg */
-	"#e5e5e5", /* 259 -> fg */
+	"#ffffff", /* 259 -> fg */
 };
 
 
@@ -554,4 +556,3 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
-
