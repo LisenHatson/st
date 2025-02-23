@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=17:antialias=true:autohint=true";
-static char *font2[] = { "Noto Sans Mono CJK JP:pixelsize=17:antialias=true:autohint=true" };
-static char *font3[] = { "NotoColorEmoji:pixelsize=13:antialias=true:autohint=true" };
+static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
+static char *font2[] = { "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
 static int borderpx = 2;
+
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -86,7 +86,6 @@ const int boxdraw_braille = 0;
  */
 static int bellvolume = 0;
 
-
 /* default TERM value */
 char *termname = "st-256color";
 
@@ -108,35 +107,34 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.85;
+float alpha = 0.8;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#222222",
-	"#F01818",
-	"#24D830",
-	"#F0D824",
-	"#7890F0",
-	"#F078D8",
-	"#54E4E4",
-	"#A5A5A5",
-	"#888888",
-	"#EF8383",
-	"#7ED684",
-	"#EFE28B",
-	"#B3BFEF",
-	"#EFB3E3",
-	"#9CE2E2",
-	"#FFFFFF",
+	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#cc241d",
+	"#98971a",
+	"#d79921",
+	"#458588",
+	"#b16286",
+	"#689d6a",
+	"#a89984",
+	"#928374",
+	"#fb4934",
+	"#b8bb26",
+	"#fabd2f",
+	"#83a598",
+	"#d3869b",
+	"#8ec07c",
+	"#ebdbb2",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#a5a5a5", /* 256 -> cursor */
-	"#888888", /* 257 -> rev cursor*/
-	"#000000", /* 258 -> bg */
-	"#ffffff", /* 259 -> fg */
+	"#add8e6", /* 256 -> cursor */
+	"#555555", /* 257 -> rev cursor*/
+	"#282828", /* 258 -> bg */
+	"#ebdbb2", /* 259 -> fg */
 };
 
 
@@ -556,3 +554,4 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+
